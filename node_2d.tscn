@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://5sqqa6v2uk6b"]
+[gd_scene load_steps=3 format=3 uid="uid://5sqqa6v2uk6b"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_1wjur"]
+[ext_resource type="AudioStream" uid="uid://d0nffls6tbvlr" path="res://sounds/hit.ogg" id="2_ylpm4"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_1wjur")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ylpm4")
+volume_db = -12.0
